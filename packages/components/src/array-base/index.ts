@@ -127,7 +127,7 @@ const getDefaultValue = (defaultValue: any, schema: Schema): any => {
   return null
 }
 
-const ArrayBaseInner = defineComponent<IArrayBaseProps>({
+const ArrayBaseInner = defineComponent({
   name: 'ArrayBase',
   props: ['disabled', 'keyMap'],
   setup(props, { slots, listeners }) {

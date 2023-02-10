@@ -16,7 +16,10 @@
     "downlevelIteration": true,
     "baseUrl": ".",
     "paths": {
-      "@formily/*": ["packages/*/src"]
+      "@formily/vant": ["./packages/components/src"],
+      "@formily/vant/esm/*": ["./packages/components/src/*"],
+      "@formily/vant/lib/*": ["./packages/components/src/*"],
+      "@formily/vant-*": ["./packages/*/src"],
     }
   }
 }

@@ -16,21 +16,30 @@ const hasBuildConfig = async () => {
  * ts file type check
  * https://www.typescriptlang.org/docs/handbook/babel-with-typescript.html
  */
-const typeCheck = async (params: string[] = []) => {
+const buildType = async (params: string[] = []) => {
   const hasProjects = await hasBuildConfig()
   if (hasProjects) {
-    params.push('--project', 'tsconfig.build.json', '--sourceRoot', 'lib')
+    params.unshift('--project', 'tsconfig.build.json')
   }
 
-  execa('tsc', params).stdout.pipe(process.stdout)
+  await execa('tsc', params)
 }
 
-const buildDefault = ({
+const buildDefault = async ({
   outDir = 'lib',
   env = 'cjs',
 }: { outDir?: string; env?: string } = {}) => {
-  typeCheck(['--outDir', outDir, '--sourceRoot', outDir])
-  execa('babel', [
+  await buildType([
+    '--outDir',
+    outDir,
+    '--sourceRoot',
+    outDir,
+    // Only output d.ts files and not JavaScript files.
+    '--emitDeclarationOnly',
+    // Ensure that Babel can safely transpile files in the TypeScript project
+    '--isolatedModules',
+  ])
+  await execa('babel', [
     'src',
     '--out-dir',
     outDir,
@@ -39,15 +48,14 @@ const buildDefault = ({
     '--extensions',
     '.ts,.tsx',
     '--copy-files',
-  ]).stdout.pipe(process.stdout)
+  ])
 }
 
 const buildEsm = async () => {
-  buildDefault({ outDir: 'esm', env: 'es' })
+  await buildDefault({ outDir: 'esm', env: 'es' })
 }
 
 export const buildLibrary = async () => {
-  await typeCheck()
   await buildDefault()
   await buildEsm()
 }

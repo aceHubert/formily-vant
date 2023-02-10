@@ -68,20 +68,24 @@
     "prettier": "^2.2.1",
     "pretty-quick": "^3.1.0",
     "raw-loader": "^4.0.0",
+    "rollup-plugin-postcss": "^3.0.0",
+    "sass": "^1.34.1",
+    "sass-loader": "^8.0.2",
     "ts-import-plugin": "1.6.1",
     "ts-jest": "^27.1.2",
     "ts-node": "^10.7.0",
     "typescript": "^4.1.5",
-    "vue": "^2.6.0",
+    "vant": "^2.12.44",
+    "vue": "^2.6.10",
     "vue-demi": "*",
     "vuepress": "^1.8.2",
     "vuepress-plugin-typescript": "^0.3.1"
   },
   "resolutions": {
-    "vue": "~2.6.14",
-    "magic-string": "~0.25.x",
-    "postcss": "^8.x",
-    "typescript": "4.4.4"
+    "vue": "~2.6.x",
+    "vue-server-renderer": "~2.6.x",
+    "vue-template-compiler": "~2.6.x",
+    "typescript": "~4.6.x"
   },
   "repository": {
     "type": "git",
@@ -91,15 +95,6 @@
     "ghooks": {
       "pre-commit": "lint-staged",
       "commit-msg": "commitlint --edit"
-    }
-  },
-  "peerDependencies": {
-    "@vue/composition-api": "^1.0.0-beta.1",
-    "vue": "^2.6.0 || >=3.0.0-rc.0"
-  },
-  "peerDependenciesMeta": {
-    "@vue/composition-api": {
-      "optional": true
     }
   }
 }
