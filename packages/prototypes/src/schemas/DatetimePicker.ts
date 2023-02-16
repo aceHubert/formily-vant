@@ -130,13 +130,6 @@ export const DatetimePicker: ISchema & { RangePicker?: ISchema } = {
             allowClear: true,
           },
         },
-        format: {
-          'x-decorator': 'FormItem',
-          'x-component': 'ValueInput',
-          'x-component-props': {
-            include: ['EXPRESSION'],
-          },
-        },
       },
     },
     formItemProps: {

@@ -20,7 +20,7 @@ export const FormLayout = {
         },
         size: {
           title: '尺寸',
-          dataSource: ['大', '继承'],
+          dataSource: ['大', '默认'],
         },
       },
     },
@@ -46,7 +46,7 @@ export const FormLayout = {
         },
         size: {
           title: 'Size',
-          dataSource: ['Large', 'Inherit'],
+          dataSource: ['Large', 'Default'],
         },
       },
     },

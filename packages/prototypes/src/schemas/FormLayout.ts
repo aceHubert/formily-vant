@@ -26,12 +26,6 @@ export const FormLayout: ISchema = {
       'x-component': 'Select',
       // 'x-reactions': "{{(field) => { !field.value && field.setValue('left') }}}",
     },
-    colon: {
-      type: 'boolean',
-      'x-decorator': 'FormItem',
-      'x-component': 'Switch',
-      // 'x-reactions': '{{(field) => { !field.value && field.setValue(true) }}}',
-    },
     size: {
       type: 'string',
       enum: ['large', null],
@@ -39,13 +33,19 @@ export const FormLayout: ISchema = {
       'x-component': 'Select',
       // 'x-reactions': "{{(field) => { !field.value && field.setValue('default') }}}",
     },
-    shallow: {
+    colon: {
       type: 'boolean',
       'x-decorator': 'FormItem',
       'x-component': 'Switch',
       // 'x-reactions': '{{(field) => { !field.value && field.setValue(true) }}}',
     },
     border: {
+      type: 'boolean',
+      'x-decorator': 'FormItem',
+      'x-component': 'Switch',
+      // 'x-reactions': '{{(field) => { !field.value && field.setValue(true) }}}',
+    },
+    shallow: {
       type: 'boolean',
       'x-decorator': 'FormItem',
       'x-component': 'Switch',

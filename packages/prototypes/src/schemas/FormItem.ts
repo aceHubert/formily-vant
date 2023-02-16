@@ -16,20 +16,32 @@ export const FormItem: ISchema = {
     },
     labelAlign: {
       type: 'string',
-      enum: ['left', 'right', null],
+      enum: ['left', 'right'],
       'x-decorator': 'FormItem',
       'x-component': 'Select',
       'x-component-props': {
         defaultValue: 'right',
+        allowClear: true,
       },
     },
     wrapperAlign: {
       type: 'string',
-      enum: ['left', 'right', null],
+      enum: ['left', 'right'],
       'x-decorator': 'FormItem',
       'x-component': 'Select',
       'x-component-props': {
         defaultValue: 'left',
+        allowClear: true,
+      },
+    },
+    size: {
+      type: 'string',
+      enum: ['large'],
+      'x-decorator': 'FormItem',
+      'x-component': 'Select',
+      'x-component-props': {
+        defaultValue: null,
+        allowClear: true,
       },
     },
     colon: {
@@ -40,13 +52,12 @@ export const FormItem: ISchema = {
         defaultChecked: true,
       },
     },
-    size: {
-      type: 'string',
-      enum: ['large', null],
+    border: {
+      type: 'boolean',
       'x-decorator': 'FormItem',
-      'x-component': 'Select',
+      'x-component': 'Switch',
       'x-component-props': {
-        defaultValue: null,
+        defaultChecked: true,
       },
     },
     center: {
@@ -68,6 +79,7 @@ export const FormItem: ISchema = {
       'x-component': 'Select',
       'x-component-props': {
         defaultValue: 'right',
+        allowClear: true,
       },
     },
     leftIcon: {
@@ -87,14 +99,6 @@ export const FormItem: ISchema = {
       'x-decorator': 'FormItem',
       'x-component': 'Input',
       'x-component-props': {},
-    },
-    border: {
-      type: 'boolean',
-      'x-decorator': 'FormItem',
-      'x-component': 'Switch',
-      'x-component-props': {
-        defaultChecked: true,
-      },
     },
   },
 }

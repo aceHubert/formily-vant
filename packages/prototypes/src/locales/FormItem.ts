@@ -3,20 +3,19 @@ const zhCN = {
   labelWidth: '标签宽度',
   labelAlign: {
     title: '标签对齐',
-    dataSource: ['左对齐', '右对齐', '继承'],
+    dataSource: ['左对齐', '右对齐'],
   },
   wrapperAlign: {
     title: '组件对齐',
-    dataSource: ['左对齐', '右对齐', '继承'],
-  },
-  shallow: '是否浅传递',
-  border: {
-    title: '边框',
-    tooltip: '是否显示内边框',
+    dataSource: ['左对齐', '右对齐'],
   },
   size: {
     title: '尺寸',
-    dataSource: ['大', '默认'],
+    dataSource: ['大'],
+  },
+  border: {
+    title: '边框',
+    tooltip: '是否显示内边框',
   },
   center: {
     title: '居中',
@@ -26,7 +25,10 @@ const zhCN = {
     title: '展示右侧箭头',
     tooltip: '是否展示右侧箭头并开启点击反馈',
   },
-  arrowDirection: '箭头方向',
+  arrowDirection: {
+    title: '箭头方向',
+    dataSource: ['左', '右', '上', '下'],
+  },
   leftIcon: {
     title: '左侧图标',
     tooltip: '左侧图标名称或图片链接',
@@ -43,20 +45,19 @@ const enUS = {
   labelWidth: 'Label Width',
   labelAlign: {
     title: 'Label Align',
-    dataSource: ['Left', 'Right', 'Inherit'],
+    dataSource: ['Left', 'Right'],
   },
   wrapperAlign: {
     title: 'Wrapper Align',
-    dataSource: ['Left', 'Right', 'Inherit'],
+    dataSource: ['Left', 'Right'],
   },
-  shallow: 'Shallow',
   border: {
     title: 'Bordered',
     tooltip: 'Whether to show inner border',
   },
   size: {
     title: 'Size',
-    dataSource: ['Large', 'Default'],
+    dataSource: ['Large'],
   },
   center: {
     title: 'Center',
@@ -66,7 +67,10 @@ const enUS = {
     title: 'Is link',
     tooltip: 'Whether to show link icon',
   },
-  arrowDirection: 'Arrow direction',
+  arrowDirection: {
+    title: 'Arrow direction',
+    dataSource: ['Left', 'Right', 'Up', 'Down'],
+  },
   leftIcon: {
     title: 'Left icon',
     tooltip: 'Left side icon name',

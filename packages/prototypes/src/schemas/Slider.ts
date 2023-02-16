@@ -47,13 +47,17 @@ export const Slider: ISchema = {
       type: 'string|boolean|number',
       'x-decorator': 'FormItem',
       'x-component': 'ColorInput',
-      'x-component-props': {},
+      'x-component-props': {
+        allowClear: true,
+      },
     },
     'inactive-color': {
       type: 'string|boolean|number',
       'x-decorator': 'FormItem',
       'x-component': 'ColorInput',
-      'x-component-props': {},
+      'x-component-props': {
+        allowClear: true,
+      },
     },
     // range: {
     //   title: GlobalRegistry.getDesignerMessage('settings.sliderRange'),
