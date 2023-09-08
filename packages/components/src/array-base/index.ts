@@ -193,6 +193,7 @@ const ArrayBaseAddition = defineComponent({
         {
           class: `${prefixCls}-addition`,
           attrs: {
+            nativeType: 'button',
             size: 'small',
             plain: true,
             icon: 'plus',
