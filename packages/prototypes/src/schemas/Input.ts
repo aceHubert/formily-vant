@@ -53,7 +53,7 @@ export const Input: ISchema = {
       'x-component': 'InputNumber',
       'x-component-props': {},
     },
-    'show-word-limit': {
+    showWordLimit: {
       type: 'number',
       'x-decorator': 'FormItem',
       'x-component': 'Switch',
@@ -69,7 +69,7 @@ export const Input: ISchema = {
           field.form?.values?.['x-component-props']?.type === 'textarea'
       },
     },
-    autoSize: {
+    autosize: {
       type: 'boolean',
       'x-decorator': 'FormItem',
       'x-component': 'ValueInput',
